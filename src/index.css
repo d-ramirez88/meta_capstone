@@ -1,13 +1,83 @@
-body {
+
+h1 {
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
+  font-size: 2.5rem;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color:#F4CE14;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin: 0;
+  color: #EDEFEE;
+}
+
+h3 {
+  font-family: "Karla", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #EDEFEE;
+  margin-block-end: 3rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Markazi Text", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1.5vw;
+  justify-content: center;
+}
+
+header img {
+  margin: 1vw 0 0 0;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  float: left;
+}
+
+header nav ul li a {
+  padding: 1vw;
+  color:#333333;
+}
+
+#heroSection {
+  display: flex;
+  padding: 3vw;
+  background-color: #495E57;
+  justify-content: center;
+}
+
+#heroSection img {
+  width:30vw;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+#heroSection div {
+  width: 30vw;
+  margin: 1vw;
+  padding: 3vw 0 0 3vw;
+}
+
+#heroSection a {
+  margin: 6vw 0 0 6vw;
+  padding: 15px;
+  background-color:#333333 ;
+  color: #EDEFEE;
+  border-radius: 16px;
 }
