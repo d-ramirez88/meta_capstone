@@ -1,7 +1,13 @@
-function FeaturedCard() {
+function FeaturedCard({title, price, description, image}) {
     return(
         <>
-        <h4>Card</h4>
+        <article>
+            <img src={image} alt="food sample"></img>
+            <h4>{title}</h4>
+            <h5>{price}</h5>
+            <h6>{description}</h6>
+            <a href="/">Order Online</a>
+        </article>
         </>
     )
 }

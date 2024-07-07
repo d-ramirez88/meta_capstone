@@ -24,10 +24,10 @@ function Footer() {
             <div>
                 <h2>Social</h2>
                 <ul>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>Youtube</li>
-                    <li>OnlyFans</li>
+                    <li><a href="http://www.instagram.com">Instagram</a></li>
+                    <li><a href="http://www.facebook.com">Facebook</a></li>
+                    <li><a href="http://www.youtube.com">Youtube</a></li>
+                    <li><a href="http://www.onlyfans.com">OnlyFans</a></li>
                 </ul>
             </div>
         </footer>
