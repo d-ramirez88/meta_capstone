@@ -1,4 +1,5 @@
 import LittleLemonLogo from "./Logo.svg"
+import { Link} from 'react-router-dom'
 
 function Footer() {
     return(
@@ -7,12 +8,12 @@ function Footer() {
             <div>
                 <h2>Site Map</h2>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Menu</a></li>
-                    <li><a href="/">Reservations</a></li>
-                    <li><a href="/">Oder Online</a></li>
-                    <li><a href="/">Log In</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="about">About</Link></li>
+                    <li><Link to="menu">Menu</Link></li>
+                    <li><Link to="reserve">Reservations</Link></li>
+                    <li><Link to="orderOnline">Oder Online</Link></li>
+                    <li><Link to="logIn">Log In</Link></li>
                 </ul>
             </div>
             <div>
@@ -24,10 +25,10 @@ function Footer() {
             <div>
                 <h2>Social</h2>
                 <ul>
-                    <li><a href="http://www.instagram.com">Instagram</a></li>
-                    <li><a href="http://www.facebook.com">Facebook</a></li>
-                    <li><a href="http://www.youtube.com">Youtube</a></li>
-                    <li><a href="http://www.onlyfans.com">OnlyFans</a></li>
+                    <li><Link to="http://www.instagram.com" reloadDocument>Instagram</Link></li>
+                    <li><Link to="http://www.facebook.com" reloadDocument>Facebook</Link></li>
+                    <li><Link to="http://www.youtube.com" reloadDocument>Youtube</Link></li>
+                    <li><Link to="http://www.onlyfans.com" reloadDocument>OnlyFans</Link></li>
                 </ul>
             </div>
         </footer>

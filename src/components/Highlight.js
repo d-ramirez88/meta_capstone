@@ -2,7 +2,7 @@ import FeaturedCard from "./FeaturedCard"
 import greekSaladImg from "./greek salad.jpg"
 import bruschettaImg from "./bruchetta.svg"
 import lemonImg from "./lemon dessert.jpg"
-
+import { Link} from 'react-router-dom'
 
 
 
@@ -44,7 +44,7 @@ function Highlight() {
     return (
         <section id="highlights">
             <h2>This weeks specials!</h2>
-            <a href="\">Reserve a table</a>
+            <Link to="reserve">Reserve a table</Link>
             <div id="highlightList">
                 {featuredItems.map((featuredItem) => {
                     return <FeaturedCard key={featuredItem.id} {...featuredItem}></FeaturedCard>
