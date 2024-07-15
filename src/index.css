@@ -138,6 +138,11 @@ article a {
 }
 
 #about {
+  font-family: "Karla", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333333;
+  margin-block-end: 3rem;
   display: flex;
   justify-content: center;
 }

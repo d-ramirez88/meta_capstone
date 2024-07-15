@@ -1,7 +1,8 @@
-import Hero from "./Hero"
-import Highlight from "./Highlight"
+import Hero from "./Hero";
+import Highlight from "./Highlight";
 import Testimonials from "./Testimonials";
 import About from "./About";
+import BookingPage from "./BookingPage";
 import { Route, Routes } from 'react-router-dom'
 
 function Main() {
@@ -17,6 +18,7 @@ function Main() {
                         <Testimonials />
                     </>}>
                 </Route>
+                <Route path="/booking" element={<BookingPage />}></Route>
             </Routes>
         </main>
     )
