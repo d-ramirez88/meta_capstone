@@ -12,7 +12,7 @@ function Hero() {
                     We are a family owned Mediterranean restaurant, focused on
                     tradicional recipes served with a modern twist.
                 </h3>
-                <Link to="reserve">Reserve a table</Link>
+                <Link to="booking">Reserve a table</Link>
             </div>
         </section>
     )
