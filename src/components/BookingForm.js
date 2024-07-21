@@ -5,11 +5,10 @@ function BookingForm({availableTimes, handleDateChange}) {
     const [occasion, setOccasion] = useState("Occasion")
 
     const [selectedTime, setSelectedTime] = useState()
-    const [date,setDate] = useState("01/01/2001")
-
+    const [date,setDate] = useState(new Date().toLocaleDateString("en-CA"))
     function handleDate(e) {
         setDate(e.target.value)
-        handleDateChange(e.target.value)
+        handleDateChange(new Date(e.target.value))
     }
 
     return (

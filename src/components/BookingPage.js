@@ -1,23 +1,33 @@
-import {useReducer} from 'react'
+import {useReducer, useEffect} from 'react'
 import BookingForm from "./BookingForm";
-function BookingPage() {
-    const intializeTimes = ["17:00","18:00","19:00","20:00","21:00","22:00"]
-    const [availableTimes, setAvailableTimes] = useReducer(updateTimes,intializeTimes)
+import {fetchAPI, submitAPI} from "../scripts/external"
 
-    function updateTimes (availableTimes, action) {
-        if (action.type === 'dateChange') {
-            return (
-                [...availableTimes, ...action.availableTimes]
-            )
-        }
+
+export function updateTimes (availableTimes, action) {
+
+    if (action.type === 'dateChange') {
+        const newTimes = fetchAPI(action.date)
+        return (
+            [...newTimes]
+        )
     }
+}
 
+export function initializeTimez() {
+    const newTimes = fetchAPI(new Date())
+    return (
+        [...newTimes]
+    )
+}
+
+function BookingPage() {
+    const [availableTimes, setAvailableTimes] = useReducer(updateTimes,initializeTimez())
     
     function handleDateChange(date) {
         setAvailableTimes({
             type: "dateChange",
-            availableTimes: ["17:00","18:00",
-                "21:00","22:00"]
+            availableTimes: ["17:00","18:00","19:00","20:00","21:00","22:00"],
+            date: date
         })
     }
 
