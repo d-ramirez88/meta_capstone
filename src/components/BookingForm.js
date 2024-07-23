@@ -14,7 +14,7 @@ function BookingForm({availableTimes, handleDateChange, handleSubmit}) {
     return (
         <form style={{display: "grid", maxWidth: 200+"px", gap: 20+"px"}}>
             <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" onChange={handleDate} value={date}/>
+            <input type="date" id="res-date" onChange={handleDate} value={date} min={new Date().toLocaleDateString("en-CA")}/>
             <label htmlFor="res-time">Choose time</label>
             <select id="res-time " onChange={e=> setSelectedTime(e.target.value)} value={selectedTime}>
                 {availableTimes.map((time, index) => {return (<option key={index}>{time}</option>)})}
