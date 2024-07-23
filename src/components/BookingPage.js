@@ -1,9 +1,10 @@
 import {useReducer, useEffect} from 'react'
 import BookingForm from "./BookingForm";
 import {fetchAPI, submitAPI} from "../scripts/external"
+import { useNavigate } from 'react-router-dom';
 
 
-export function updateTimes (availableTimes, action) {
+export function updateTimes (action) {
 
     if (action.type === 'dateChange') {
         const newTimes = fetchAPI(action.date)
@@ -22,7 +23,8 @@ export function initializeTimez() {
 
 function BookingPage() {
     const [availableTimes, setAvailableTimes] = useReducer(updateTimes,initializeTimez())
-    
+    const navigate = useNavigate()
+
     function handleDateChange(date) {
         setAvailableTimes({
             type: "dateChange",
@@ -31,9 +33,15 @@ function BookingPage() {
         })
     }
 
+    function submitForm(data) {
+            if (submitAPI(data)) {
+                navigate("/bconfirmation")
+            }
+        }
+
     return (
         <>
-        <BookingForm availableTimes={availableTimes} handleDateChange={handleDateChange}/>
+        <BookingForm availableTimes={availableTimes} handleDateChange={handleDateChange} handleSubmit={submitForm}/>
         </>
     )
 }

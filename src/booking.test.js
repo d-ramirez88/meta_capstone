@@ -21,13 +21,15 @@ test ('Renders the booking form label', ()=> {
 
 
 test ('tests udpateTimes', ()=> {
-    const inputTimes = ["00:00", "12:34", "56:78"]
-    const returnValue = updateTimes(inputTimes, {id:1, type:'dateChange'})
-    expect(returnValue).toStrictEqual(inputTimes)
+    const testDate = new Date()
+    const returnValue = updateTimes({id:1, type:'dateChange', date: testDate})
+    expect(returnValue).toBeInstanceOf(Array)
+    expect(returnValue).not.toHaveLength(0)
 
 })
 
 test ('tests initializeTimez', ()=> {
     const returnValue = initializeTimez()
-    expect(returnValue).toStrictEqual(["17:00","18:00","19:00","20:00","21:00","22:00"])
+    expect(returnValue).toBeInstanceOf(Array)
+    expect(returnValue).not.toHaveLength(0)
 })

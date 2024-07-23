@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
-function BookingForm({availableTimes, handleDateChange}) {
-    const [guests, setGuests] = useState(0)
+function BookingForm({availableTimes, handleDateChange, handleSubmit}) {
+    const [guests, setGuests] = useState(1)
     const [occasion, setOccasion] = useState("Occasion")
 
     const [selectedTime, setSelectedTime] = useState()
@@ -26,7 +26,7 @@ function BookingForm({availableTimes, handleDateChange}) {
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>
-            <input type="submit" value="Make Your reservation"/>
+            <input type="submit" value="Make Your reservation" onClick={handleSubmit}/>
         </form>
     )
 }
