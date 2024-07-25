@@ -44,7 +44,7 @@ function Highlight() {
     return (
         <section id="highlights">
             <h2>This weeks specials!</h2>
-            <Link to="reserve">Reserve a table</Link>
+            <Link to="reserve" aria-label="Reserve a table">Reserve a table</Link>
             <div id="highlightList">
                 {featuredItems.map((featuredItem) => {
                     return <FeaturedCard key={featuredItem.id} {...featuredItem}></FeaturedCard>

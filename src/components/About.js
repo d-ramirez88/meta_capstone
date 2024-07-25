@@ -3,7 +3,7 @@ import aboutImage from "./Mario and Adrian b.jpg"
 function About() {
     return (
         <section id="about">
-            <div>
+            <article>
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>Located in the heart of Chicago, this 
@@ -13,7 +13,7 @@ function About() {
                     Mario and Adrian are serving smiles and joy to the 
                     midwest. 
                 </p>
-            </div>
+            </article>
             <img src={aboutImage} alt="Mario and Adrian" />
         </section>
     )

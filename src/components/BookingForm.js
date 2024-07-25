@@ -26,19 +26,19 @@ function BookingForm({availableTimes, handleDateChange, handleSubmit}) {
     return (
         <form style={{display: "grid", maxWidth: 200+"px", gap: 20+"px"}}>
             <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" onChange={handleDate} value={date} min={new Date().toLocaleDateString("en-CA")}/>
+            <input type="date" id="res-date" aria-label="choose date" onChange={handleDate} value={date} min={new Date().toLocaleDateString("en-CA")}/>
             <label htmlFor="res-time">Choose time</label>
-            <select id="res-time " onChange={e=> setSelectedTime(e.target.value)} value={selectedTime}>
-                {availableTimes.map((time, index) => {return (<option key={index}>{time}</option>)})}
+            <select id="res-time " aria-label="select time" onChange={e=> setSelectedTime(e.target.value)} value={selectedTime}>
+                {availableTimes.map((time, index) => {return (<option key={index} aria-label={time}>{time}</option>)})}
             </select>
             <label htmlFor="guests">Number of guests</label>
-            <input type="number" min="1" max="10" id="guests" onChange={e=>{setGuests(e.target.value)}} value={guests}/>
+            <input type="number" min="1" max="10" id="guests" aria-label="number of guests" onChange={e=>{setGuests(e.target.value)}} value={guests}/>
             <label htmlFor="occasion">Occasion</label>
-            <select id="occasion" onChange={e => setOccasion(e.target.value)} value={occasion}>
-                <option>Birthday</option>
-                <option>Anniversary</option>
+            <select id="occasion" aria-label="Select occasion" onChange={e => setOccasion(e.target.value)} value={occasion}>
+                <option aria-label="birthday">Birthday</option>
+                <option aria-label="anniversary">Anniversary</option>
             </select>
-            <input type="submit" value="Make Your reservation" onClick={handleSubmit} disabled={dataValid()}/>
+            <input type="submit" value="Make Your reservation" aria-label="Make your reservation" onClick={handleSubmit} disabled={dataValid()}/>
         </form>
     )
 }

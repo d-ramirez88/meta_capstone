@@ -6,7 +6,7 @@ function FeaturedCard({title, price, description, image}) {
             <h4>{title}</h4>
             <h5>{price}</h5>
             <h6>{description}</h6>
-            <a href="/">Order Online</a>
+            <a href="/" aria-label="Order online">Order Online</a>
         </article>
         </>
     )
