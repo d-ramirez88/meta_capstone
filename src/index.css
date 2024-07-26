@@ -176,6 +176,42 @@ article a {
   margin: 10vh 3vw 3vw 10vh;
 }
 
+#bookingPage {
+  text-align: center;
+}
+
+#bookingPage form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#bookingPage form label , input, select{
+  font-family: "Karla", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333333;
+  margin-block-start: 1rem;
+}
+
+input:invalid {
+  border: solid 5px #d34604;
+}
+
+input[type="submit"] {
+  color: #333333;
+  background-color: #F4CE14;
+  padding: 10px 40px 10px 40px;
+}
+input[type="submit"]:disabled {
+  background-color: #EDEFEE;
+  color: #9e9e9e;
+  border: none;
+}
+
+
+
 h6 {
   font-family: "Karla", sans-serif;
   font-size: 1rem;

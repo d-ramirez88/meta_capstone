@@ -38,9 +38,9 @@ function BookingPage() {
         }
 
     return (
-        <>
+        <section id="bookingPage">
         <BookingForm availableTimes={availableTimes} handleDateChange={handleDateChange} handleSubmit={submitForm}/>
-        </>
+        </section>
     )
 }
 
