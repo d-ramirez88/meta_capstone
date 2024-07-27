@@ -1,8 +1,8 @@
 function ConfirmedBooking() {
     return(
-    <>
-    <h1>Your booking has been confirmed</h1>
-    </>
+    <section id="confirmedBooking">
+        <h1>Your booking has been confirmed</h1>
+    </section>
     )
 }
 

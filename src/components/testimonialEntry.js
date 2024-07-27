@@ -1,7 +1,7 @@
 function TestimonialEntry({rating, name, comments}) {
     function printStars(number) {
         let stars = ""
-        for (let i=0; i<= number; i++){
+        for (let i=0; i< number; i++){
             stars += "❤"
         }
         return stars
